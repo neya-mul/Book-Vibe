@@ -28,7 +28,7 @@ export default function Navbar() {
 
     );
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm container mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,8 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn bg-green-400 text-white">Sign In</a>
+                <a className="btn bg-blue-400 text-white">Sign Up</a>
             </div>
         </div>
     )
