@@ -4,10 +4,14 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
 import { router } from './Router/Routes'
+import BookProvider from './context/BookProvider'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <BookProvider>
+      <RouterProvider router={router} />
+    </BookProvider>
+
   </StrictMode>,
 )

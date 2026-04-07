@@ -1,14 +1,23 @@
-import React, { use } from 'react'
+import React, { use, useContext, useState } from 'react'
 import { useParams } from 'react-router'
+import { bookContext } from '../context/BookProvider'
 const bookPromise = fetch('/booksData.json')
     .then(res => res.json())
 
 export default function BookDetails() {
     const { id } = useParams()
     const books = use(bookPromise)
+
+
     const expectedBook = books.find(book => book.bookId == id)
-    console.log(expectedBook);
-    // const [image, bookName, review] = expectedBook
+
+    const { handelMarkAsRead, storedBook } = useContext(bookContext)
+    // console.log(BookContext)
+    // console.log(handelMarkAsRead, storedBook);
+
+
+
+
 
 
     return (
@@ -41,8 +50,8 @@ export default function BookDetails() {
                     <p>Rating : {expectedBook.rating}</p>
                 </div>
                 <div className='flex gap-3'>
-                    <button className='btn'>Read</button>
-                    <button className='btn bg-[#50B1C9] text-white'>WishList</button>
+                    <button className='btn' onClick={() => handelMarkAsRead(expectedBook)}>Mark as Read</button>
+                    <button className='btn bg-[#50B1C9] text-white'>Add to WishList</button>
                 </div>
             </div>
         </div>
