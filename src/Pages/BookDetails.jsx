@@ -11,7 +11,7 @@ export default function BookDetails() {
 
     const expectedBook = books.find(book => book.bookId == id)
 
-    const { handelMarkAsRead, storedBook } = useContext(bookContext)
+    const { handelMarkAsRead, storedBook, handelWishList } = useContext(bookContext)
     // console.log(BookContext)
     // console.log(handelMarkAsRead, storedBook);
 
@@ -51,7 +51,7 @@ export default function BookDetails() {
                 </div>
                 <div className='flex gap-3'>
                     <button className='btn' onClick={() => handelMarkAsRead(expectedBook)}>Mark as Read</button>
-                    <button className='btn bg-[#50B1C9] text-white'>Add to WishList</button>
+                    <button className='btn bg-[#50B1C9] text-white' onClick={()=>handelWishList(expectedBook)}>Add to WishList</button>
                 </div>
             </div>
         </div>
