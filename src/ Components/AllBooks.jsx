@@ -6,7 +6,7 @@ const bookPromise = fetch('/booksData.json')
 
 export default function AllBooks() {
     const books = use(bookPromise)
-    console.log(books);
+    // console.log(books);
 
 
     return (

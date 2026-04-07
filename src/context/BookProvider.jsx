@@ -1,4 +1,5 @@
 import React, { Children, createContext, useState } from 'react'
+import { toast } from 'react-toastify'
 export const bookContext = createContext()
 export default function BookProvider({ children }) {
 
@@ -6,14 +7,22 @@ export default function BookProvider({ children }) {
 
 
     const handelMarkAsRead = (currentbook) => {
-       
+
         const isExist = storedBook.find(book => book.bookId === currentbook.bookId)
         if (isExist) {
-            alert("The book is already exist")
+            toast.warn(
+                <p>
+                    <span className='font-bold'>{currentbook.bookName}</span> already exists
+                </p>
+            )
         }
         else {
             setStoredBook([...storedBook, currentbook])
-
+            toast.success(
+                <p>
+                    <span className='font-bold'>{currentbook.bookName}</span> has added to the list
+                </p>
+            )
         }
 
         // console.log(storedBook);
