@@ -1,9 +1,10 @@
 import React from 'react'
 import { CiStar } from 'react-icons/ci'
+import { Link } from 'react-router'
 
 export default function BookCard({ book }) {
     return (
-        <div className='mx-auto border w-[300px] p-5 rounded-2xl border-gray-300'>
+        <Link to={`/bookDetails/${book.bookId}`} className='mx-auto border w-[300px] p-5 rounded-2xl border-gray-300'>
             <div className='p-5 bg-gray-100'>
                 {/* image div */}
                 <img src={book.image} className='h-[150px] w-fit mx-auto' alt="" />
@@ -23,6 +24,6 @@ export default function BookCard({ book }) {
                 <span className='flex items-center'>{book.rating} <CiStar />
                 </span>
             </div>
-        </div>
+        </Link>
     )
 }
