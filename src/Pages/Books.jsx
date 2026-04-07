@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { bookContext } from '../context/BookProvider';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ListedReadList from '../ Components/ListedReadList';
+import ListedWishList from '../ Components/ListedWishList';
 
 export default function Books() {
   const { storedBook, wishList } = useContext(bookContext)
@@ -20,10 +22,10 @@ export default function Books() {
           </TabList>
 
           <TabPanel>
-            <h2>read list</h2>
+            <ListedReadList></ListedReadList>
           </TabPanel>
           <TabPanel>
-            <h2>wishList</h2>
+            <ListedWishList></ListedWishList>
           </TabPanel>
         </Tabs>
       </div>
