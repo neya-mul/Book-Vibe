@@ -19,7 +19,7 @@ export default function BookDetails() {
                 <img src={expectedBook.image} alt="" className='h-[700px] mx-auto' />
             </div>
             {/* description */}
-            <div className=' max-w-[600px] space-y-10 p-6 mx-auto'>
+            <div className=' max-w-[600px] space-y-5 p-6 mx-auto'>
                 <div className='border-b border-gray-400'>
                     <h1 className='text-5xl'>{expectedBook.bookName}</h1>
                     <p>By:{expectedBook.author}</p>
@@ -34,11 +34,15 @@ export default function BookDetails() {
                 <div className='border-b border-gray-400 py-5'>
                     <p><span className='font-bold '>Review: </span>{expectedBook.review}</p>
                 </div>
-                <div>
+                <div className='border-b border-gray-400 py-5'>
                     <p>Number or pages : {expectedBook.totalPages}</p>
                     <p>Publisher : {expectedBook.publisher}</p>
                     <p>Year of Publishing : {expectedBook.yearOfPublishing}</p>
                     <p>Rating : {expectedBook.rating}</p>
+                </div>
+                <div className='flex gap-3'>
+                    <button className='btn'>Read</button>
+                    <button className='btn bg-[#50B1C9] text-white'>WishList</button>
                 </div>
             </div>
         </div>
