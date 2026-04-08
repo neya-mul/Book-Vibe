@@ -13,7 +13,7 @@ export default function ReadList({book}) {
         />
     </div>
 
-    {/* Right - Details */}
+    {/* Right - Details */} 
     <div className='flex flex-col gap-2'>
         <h1 className='text-2xl font-bold text-gray-800'>{book.bookName}</h1>
         <p className='text-gray-500'>
