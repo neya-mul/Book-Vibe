@@ -28,6 +28,9 @@ export default function ReadList({book}) {
         <p className='text-gray-500'>
             <span className='font-semibold text-gray-700'>Year: </span>{book.yearOfPublishing}
         </p>
+        <p className='text-gray-500'>
+            <span className='font-semibold text-gray-700'>Year: </span>{book.rating}
+        </p>
     </div>
 </div>
 

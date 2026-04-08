@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import WishList from './WishList'
 import { bookContext } from '../context/BookProvider'
 
-export default function ListedWishList() {
-    const { storedBook, wishList } = useContext(bookContext)
+export default function ListedWishList({sortingType}) {
+    const { wishList } = useContext(bookContext)
     return (
         <div>
             {
