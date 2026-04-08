@@ -12,7 +12,7 @@ export default function Books() {
   console.log(sortingType)
 
   return (
-    <div className='container mx-auto my-6'>
+    <div className='container mx-auto my-6 '>
       <div className='flex justify-center'>
         <div className="dropdown dropdown-start">
           <div tabIndex={0} role="button" className="btn m-1">Short By ⬇️</div>

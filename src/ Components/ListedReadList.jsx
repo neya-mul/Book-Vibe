@@ -22,7 +22,7 @@ export default function ListedReadList({ sortingType }) {
         }
     }, [sortingType])
     return (
-        <div>
+        <div className=''>
             {
                 filterStoredBook.length === 0 ? <div className='flex flex-col items-center justify-center py-20 text-center'>
                     <div className='bg-gray-100 rounded-2xl p-12 shadow-inner max-w-md mx-auto'>

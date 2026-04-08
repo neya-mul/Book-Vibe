@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function WishList({book}) {
     return (
-        <div className='flex items-center gap-6 bg-white shadow-md rounded-2xl p-6 w-full'>
+        <div className='flex my-10 items-center gap-6 bg-white shadow-xl rounded-2xl p-6 w-full'>
             {/* Left - Image */}
             <div className='min-w-[120px]'>
                 <img
