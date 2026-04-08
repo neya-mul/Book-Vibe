@@ -28,7 +28,7 @@ export default function WishList({book}) {
                     <span className='font-semibold text-gray-700'>Year: </span>{book.yearOfPublishing}
                 </p>
                 <p className='text-gray-500'>
-                    <span className='font-semibold text-gray-700'>Year: </span>{book.rating}
+                    <span className='font-semibold text-gray-700'>Rating: </span>{book.rating}
                 </p>
             </div>
         </div>
