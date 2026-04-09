@@ -12,7 +12,7 @@ export default function Banner() {
                 <div className='space-y-7'>
                     <h1 className="text-5xl font-bold">Books to freshen up <br /> your bookshelf</h1>
 
-                    <button className="btn btn-success text-white">View The List</button>
+                    <button className="btn btn-success text-white">View the List</button>
                 </div>
             </div>
         </div>
