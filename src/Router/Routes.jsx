@@ -6,7 +6,7 @@ import NotFound404 from "../Pages/Error";
 import BookDetails from "../Pages/BookDetails";
 // import BookDetails from "../ Components/BookDetails";
 
-export const router = createBrowserRouter([
+export const Router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
